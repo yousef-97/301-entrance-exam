@@ -22,6 +22,11 @@ function render(){
         newList.textContent = objArr[i].whatToDo;
         olE.appendChild(newList);
         newList.appendChild(dateInList);
+        var newButton = document.createElement('button');
+        olE.appendChild(newButton);
+        newButton.setAttribute('class','but');
+        newButton.setAttribute('id',i);
+        newButton.textContent = 'X';
     }
     
 
@@ -50,5 +55,35 @@ function getList(){
         objArr = JSON.parse(getting);
     }
 }
+
 getList();
 render();
+
+var thebut = document.querySelectorAll('.but');
+// console.log(thebut);
+
+// for(var j =0 ; thebut.length;j++){
+    // if(thebut){
+olE.addEventListener('click', removeFromList)
+        
+
+function removeFromList(event){
+
+    var theTarget = event.target.id;
+    for(var j =0 ; j<thebut.length;j++){
+        if(theTarget == j){
+        
+            objArr.splice(j,1);
+            render();
+            setList();
+        }
+
+
+
+    }
+    
+}
+
+
+
+
