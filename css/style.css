@@ -43,10 +43,26 @@ input{
     margin: 0 auto;
 }
 #thebutton{
+    cursor: pointer;
     color: white;
     border: none;
     background-color:#6d8adbc7 ;
     padding:10px ;
     float: right;
     margin: 30px 105px 0 0;
+}
+div#theList {
+    margin-top: 3%;
+    position: absolute;
+    display: inline-block;
+    margin-left: 15%;
+}
+#theList li {
+    list-style: decimal;
+    padding: 20px;
+    font-size: 30px;
+}
+#theList li p {
+    color:#6d8adbc7;
+    font-size: medium;
 }
